@@ -1,0 +1,16 @@
+.app__products{
+    background-color: var(--color-black);
+}
+
+.products__listing{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --font-base: 'Open Sans', sans-serif;
+  --font-alt: 'Julius Sans One', sans-serif;;
+  
+  --color-black: #000000;
+  --light-gray: #7c7c7c;
+  --dark-gray: #333f52;
+  --color-white: #ffffff;
+  --light-blue: #63a3fd;
+  --dark-blue: #205ef1;
+  --color-green: #41d895;
+  --gentle-white: #d4d1d1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-base);
+}
+
+// .App {
+//   background-color: var(--color-black);
+// }
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.section__padding {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__section {
+  padding: 3.5rem 3rem;
+  min-height: 100vh;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: var(--font-alt);
+  color: var(--light-blue);
+  margin-bottom: 2.5rem;
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+}
+
+.app__page {
+  background-color: #000000;
+}

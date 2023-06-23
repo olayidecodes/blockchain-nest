@@ -1,0 +1,76 @@
+#tsparticles {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.app__banner-box {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    h1 {
+        font-size: 3.2rem;
+        line-height: 3.4rem;
+        margin-bottom: 1.5rem;
+        color: var(--light-blue);
+        font-family: var(--font-alt);
+    }
+
+    p {
+        margin-bottom: 20px;
+        padding-right: 5px;
+        color: var(--color-white);
+        font-size: 22px;
+        line-height: 1.3em;
+        font-weight: 100;
+    }
+
+    .join__box {
+        display: block;
+        margin-top: 0rem;
+        
+        .box {
+            display: flex;
+            width: auto;
+            margin-top: 20px;
+            padding-top: 0px;
+            align-items: center;
+            transition: all 200ms ease;
+            color: var(--light-blue);
+            text-decoration: none;
+
+            .icon {
+                display: inline-block;
+                margin-bottom: 0px;
+                transition: all 200ms ease;
+                font-family: 'Fa brands 400', sans-serif;
+                font-size: 30px;
+            }
+
+            .text {
+                margin-bottom: 0;
+                padding-left: 20px;
+                font-size: 1rem;
+                color: var(--light-blue);
+
+                &:hover {
+                    color: var(--dark-blue); 
+                }
+            }
+
+            &:hover { 
+                transform: scale(1.1);
+                color: var(--dark-blue); 
+                cursor: pointer;
+            }
+
+        }
+    }
+
+}

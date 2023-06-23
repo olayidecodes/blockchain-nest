@@ -1,0 +1,104 @@
+.app__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* From https://css.glass */
+    background: rgba(219, 219, 219, 0.1);
+    border-radius: 17px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    color: white;
+
+    .app__navbar-logo {
+        cursor: pointer;
+        img {
+            width: 12rem;
+        }
+    }
+
+    .app__navbar-links {
+        display: flex;
+        list-style: none;
+        gap: .9rem;
+        @media screen and (max-width: 1000px) {
+            display: none;
+            
+        }
+
+        li {
+            a {
+            font-size: 1rem;
+            color: var(--light-gray);
+            font-weight: 600;
+            padding: .3rem 0;
+
+                &:hover {
+                    color: var(--color-white);
+                    border-bottom: 2px solid var(--dark-blue);
+                }
+            }
+        }
+    }
+
+    .app__navbar-smallscreen{
+        display: none;
+        @media screen and (max-width: 1000px) {
+            display: block;
+        }
+
+        .app__navbar-smallscreen_overlay{
+            position: fixed;
+            top: 5rem;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background: var(--color-black);
+            transition: 0.5s ease;
+            flex-direction: column;
+            z-index: 5;
+        
+        }
+        
+        .overlay__open{
+            color: var(--color-white);
+            font-size: 27px;
+            cursor: pointer;
+        
+        }
+        
+        .app__navbar-smallscreen-links{
+            list-style: none;
+        }
+        
+        .app__navbar-smallscreen-links li{
+            margin: .5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            font-family: var(--font-base);
+        }
+        
+        .app__navbar-smallscreen-links li:hover{
+            color: var(--color-white);
+        }
+
+        .overlay_socials{
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .app__navbar-links,
+    .app__navbar-socials {
+        display: none;
+    }
+
+    .app__navbar-smallscreen {
+        display: block;
+    }
+}

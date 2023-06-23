@@ -1,0 +1,26 @@
+.social__links {
+    display: flex;
+    gap: .7rem;
+    list-style: none;
+
+    li {
+        a {
+
+            .icon {
+                font-size: 1.2rem;
+                color: var(--light-blue);
+                transition: all 200ms ease-in-out;
+                margin: .15rem;
+                transform: scale3d(1none, 1none, 1none);
+                transform-style: preserve-3d;
+                &:hover {
+                    color: var(--dark-blue);
+                    transform: scale(1.2);
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+            }
+           
+        }
+    }
+}
