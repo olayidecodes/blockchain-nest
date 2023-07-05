@@ -1,18 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import images from '../../constants/images'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu } from '../../components'
 import './Single.scss'
+import axios from 'axios'
 
 const Single = () => {
+
+  const [ post, setPost ] = useState({});
+
+  const location = useLocation()
+  console.log(location)
+
+  const postId = location.pathname.split("/")[3]
+  console.log(postId)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`/posts/${postId}`);
+        setPost(res.data)
+      } catch(err){
+        console.log(err)
+      }
+    };
+    fetchData();
+  }, [])
+
   return (
     <div className='single app__section'>
       <div className='content'>
-        <img src="https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <img src={post?.img} />
         <div className='user'>
           <img src= "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
           <div className='info'>
-            <span>Matthews Victoria</span>
+            <span>{post.username}</span>
             <p>Posted 2 days ago</p>
           </div>
           <div className='edit'>
