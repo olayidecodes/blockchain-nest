@@ -2,11 +2,11 @@
     display: flex;
     gap: 50px;
     background-color: var(--color-black);
-    position: absolute;
     color: var(--gentle-white);
-    top: 0;
-    left: 0;
-    z-index: -1;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: -1;
     padding-top: 20rem;
 
     .content {
