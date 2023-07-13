@@ -1,5 +1,4 @@
 import Blog from './Blog/Blog';
-import Contact from './Contact/Contact';
 import Faq from './Faq/Faq';
 import Home from './Home/Home';
 import Login from './Login/Login';
@@ -9,7 +8,6 @@ import Single from './Single/Single';
 
 export {
   Blog,
-  Contact,
   Faq,
   Home,
   Login,

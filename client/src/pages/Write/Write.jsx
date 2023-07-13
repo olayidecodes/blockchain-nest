@@ -73,7 +73,6 @@ const Write = () => {
           <input style={{display:"none"}} type="file" name="" id="file" onChange={e=> setFile(e.target.files[0])}/>
           <label className='file' htmlFor="file">Upload Image</label>
           <div className="buttons">
-            <button>Save as a draft</button>
             <button onClick={handleClick}>Publish</button>
           </div>
         </div>

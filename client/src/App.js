@@ -4,7 +4,7 @@ import {
   Route,
   Outlet
 } from "react-router-dom";
-import { Blog, Contact, Faq, Home, Login, Register, Single, Write } from "./pages";
+import { Blog, Faq, Home, Login, Register, Single, Write } from "./pages";
 import { Navbar } from './components';
 import Footer from './components/Footer';
 import './App.scss'
@@ -28,10 +28,6 @@ const router = createBrowserRouter([
       {
       path: "/",
       element: <Home />
-      },
-      {
-        path: "/contact",
-        element: <Contact />
       },
       {
         path: "/faq",

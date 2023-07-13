@@ -6,7 +6,7 @@ import './Partners.scss'
 
 const Partners = () => {
   return (
-    <section className='app__section app__partners'>
+    <section className='app__section app__partners' id='partners'>
         <h1 className='section__title'>Partners</h1>
         <div className='partners__list'>
             {data.partners.map((partner) => 

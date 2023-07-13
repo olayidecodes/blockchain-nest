@@ -48,7 +48,7 @@ const Single = () => {
   return (
     <div className='single app__section'>
       <div className='content'>
-        <img src={`../upload/${post?.img}`} />
+        <img src={`../upload/${post.img}`} />
         <div className='user'>
           {post.userImg && <img src={post.userImg} alt='Writer'/>}
           <div className='info'>
@@ -68,7 +68,7 @@ const Single = () => {
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(post.desc),
           }}
-        ></p>
+        ></p> 
       </div>
 
       <Menu cat={post.cat}/>
